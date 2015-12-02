@@ -1,0 +1,11 @@
+- name: Create a PostgreSQL DB server
+  hosts: dbserver
+  sudo: yes
+  sudo_user: root
+  remote_user: ubuntu
+  vars_files:
+    - vars/main.yml
+
+  roles:
+  - createdb
+
